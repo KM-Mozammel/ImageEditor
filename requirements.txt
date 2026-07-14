@@ -1,0 +1,23 @@
+numpy
+Pillow
+opencv-python
+
+# matplotlib
+
+# torch
+# torchvision
+
+# transformers
+# huggingface-hub
+
+# scikit-image
+# scikit-learn
+
+# rembg
+# onnxruntime
+
+# ultralytics
+
+# segment-anything
+
+# tqdm
