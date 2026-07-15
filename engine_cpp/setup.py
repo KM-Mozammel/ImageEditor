@@ -8,7 +8,7 @@ ext_modules = [
         ["engine_cpp/pipeline.cpp"],  # Source file
         include_dirs=[pybind11.get_include()],  # Where to find pybind11 headers
         language="c++",
-        extra_compile_args=["/O2"],  # Windows/MSVC optimization flag
+        extra_compile_args=["/O2", "/openmp"],  # Windows/MSVC optimization flag
     ),
 ]
 

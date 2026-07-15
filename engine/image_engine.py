@@ -12,6 +12,8 @@ class ImageEngine:
             self.pipeline.add_brightness(brightness)
         if contrast != 0:
             self.pipeline.add_contrast(contrast)
+        if saturation != 0:
+            self.pipeline.add_saturation(saturation)
 
         result = image.copy()
         self.pipeline.render(result)
