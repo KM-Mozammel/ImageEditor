@@ -178,3 +178,9 @@ Many calculations happen simultaneously.
 NumPy is excellent for vectorized math (where you apply one operation to the whole array). However, if your algorithm requires complex, non-vectorizable logic—like conditional pixel branching or recursive filters—NumPy becomes slow because you have to write Python for loops. C++ handles these loops at hardware speed.
 
 python engine_cpp/setup.py build_ext --inplace
+
+
+Core Engine in Native C++
+In Photoshop: Photoshop’s performance-critical core is written in highly optimized, multi-threaded C++. It directly accesses CPU vector instructions (AVX/NEON) and offloads complex rendering tasks to the GPU (via Metal, Vulkan, or DirectX).
+
+In your project: Your engine_cpp compiled into a native Windows library (image_engine_cpp.cp310-win_amd64.pyd) mirrors this perfectly. This ensures that looping through millions of RGB pixels happens at bare-metal speed without being bottlenecked by Python's Global Interpreter Lock (GIL).
